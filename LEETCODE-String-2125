@@ -1,0 +1,22 @@
+class Solution {
+    public int numberOfBeams(String[] bank) {
+        int n =bank.length;
+        int PDC=0;
+        int result=0;
+        for(int i=0;i<n;i++)
+        {
+            int CDC=0;
+            for(char ch:bank[i].toCharArray())
+            {
+                if(ch=='1') CDC++;
+            }
+                result+=(PDC*CDC);
+                PDC=(CDC==0)?PDC:CDC;
+
+            
+        }
+        return result;
+    }
+}
+
+
